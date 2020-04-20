@@ -1,0 +1,60 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/main-layout">
+
+<th:block th:fragment="common-left">
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="/demo/" class="brand-link">
+            <span class="brand-text font-weight-light">WinCert :: Web Framework</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                User Test
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/user/userInfo" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>사용자 보기</p>
+                                </a>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                                <a href="/demo/mfa/mfa_add" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>MFA 추가</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/demo/authn/req_authn" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>인증 요청</p>
+                                </a>
+                            </li>
+                            -->
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+</th:block>
+
+</html>

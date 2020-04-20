@@ -1,0 +1,44 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>WinCert :: Web Framework</title>
+		<th:block th:include="layout/include-css.html :: css"></th:block>
+		<!-- ###################### 각각 페이지 css ###################### -->
+		<th:block layout:fragment="contents-css">
+		</th:block>
+		<!-- //###################### 각각 페이지 css ###################### -->
+	</head>
+
+
+	<!-- 상단 메뉴 -->
+	<th:block th:include="common/common-head.html :: common-head"></th:block>
+
+
+	<!-- 레프트 메뉴 -->
+	<th:block th:include="common/common-left.html :: common-left"></th:block>
+
+
+
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper">
+		<!-- Main content -->
+			<!-- ###################### 각각 페이지 컨텐츠 ###################### -->
+<!--			<section layout:fragment="contents-body"></section>-->
+		<th:block layout:fragment="body-contents"></th:block>
+			<!--// ###################### 각각 페이지 컨텐츠 ###################### -->
+		<!-- /.content -->
+	</div>
+
+
+	<th:block th:include="common/common-footer.html :: common-footer"></th:block>
+
+	</body>
+	<th:block th:include="layout/include-js.html :: js"></th:block>
+	<!-- ###################### 각각 페이지 script ###################### -->
+	<th:block layout:fragment="contents-script"></th:block>
+	<!-- //###################### 각각 페이지 script ###################### -->
+</html>

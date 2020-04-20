@@ -1,0 +1,92 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/main-layout">
+
+<head>
+    <th:block layout:fragment="contents-css">
+        <!-- 여기에 페이지 CSS 작성 -->
+    </th:block>
+</head>
+
+<div class="contents">
+    <th:block layout:fragment="body-contents" >
+        <section class="content">
+            <!--여기다가 페이지 화면 코딩-->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">Dashboard</h1>
+                        </div><!-- /.col -->
+
+                        <!--
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Dashboard v1</li>
+                            </ol>
+                        </div>
+                        -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <div>
+                <!--                여기에 사용자 이름 & 이메일 폼 추가-->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Responsive Hover Table</h3>
+                        <div class="card-tools">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-hover text-nowrap">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User</th>
+                                <th>Email</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each = "user : ${users}">
+                                <td th:text="${user.getIndex_no()}">183</td>
+                                <td th:text="${user.getUser_name()}">John Doe</td>
+                                <td th:text="${user.getUser_email()}">11-7-2014</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+        </section>
+    </th:block>
+</div><!-- contents //-->
+
+
+<th:block layout:fragment="contents-script" >
+    <!-- 여기에 페이지 javascript 작성 -->
+    <script th:inline="javascript">
+
+        $(document).ready(function(){
+
+        });
+
+        function userInfo() {
+            alert($("#user_name").val());
+            alert($("#user_email").val());
+        }
+
+    </script>
+</th:block>
+</html>

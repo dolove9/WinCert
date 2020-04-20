@@ -1,0 +1,82 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/main-layout">
+
+<head>
+    <th:block layout:fragment="contents-css">
+        <!-- 여기에 페이지 CSS 작성 -->
+    </th:block>
+</head>
+
+<div class="contents">
+    <th:block layout:fragment="body-contents" >
+        <section class="content">
+        <!--여기다가 페이지 화면 코딩-->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">Dashboard</h1>
+                        </div><!-- /.col -->
+
+                        <!--
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Dashboard v1</li>
+                            </ol>
+                        </div>
+                        -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <div>
+<!--                여기에 사용자 이름 & 이메일 폼 추가-->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">사용자 정보</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form role="form">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="user_name">사용자 이름</label>
+                                <input type="text" class="form-control" id="user_name" placeholder="User Name" th:value="${userName}">
+                            </div>
+                            <div class="form-group">
+                                <label for="user_email">Email address</label>
+                                <input type="text" class="form-control" id="user_email" placeholder="Enter email" th:value="${userEmail}">
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <div onclick="userInfo()" class="btn btn-primary">Submit</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </th:block>
+</div><!-- contents //-->
+
+
+<th:block layout:fragment="contents-script" >
+    <!-- 여기에 페이지 javascript 작성 -->
+    <script th:inline="javascript">
+
+        $(document).ready(function(){
+
+        });
+
+        function userInfo() {
+            alert($("#user_name").val());
+            alert($("#user_email").val());
+        }
+
+    </script>
+</th:block>
+</html>
