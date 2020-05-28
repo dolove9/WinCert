@@ -1,0 +1,30 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/main-layout">
+
+<head>
+    <th:block layout:fragment="contents-css">
+        <!-- 여기에 페이지 CSS 작성 -->
+    </th:block>
+</head>
+
+
+<th:block layout:fragment="body-contents" >
+
+
+</th:block>
+
+
+
+<th:block layout:fragment="contents-script" >
+    <!-- 여기에 페이지 javascript 작성 -->
+    <script th:inline="javascript">
+
+        $(document).ready(function(){
+
+        });
+    </script>
+</th:block>
+</html>

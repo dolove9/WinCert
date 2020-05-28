@@ -1,0 +1,498 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+        .tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+    </style>
+</head>
+<body>
+<div class="col-lg-12">
+<!--    <table class="table" class="tg">-->
+    <table class="tg">
+        <tbody><tr>
+            <th class="tg-0lax" rowspan="4">평가항목</th>
+            <th class="tg-0lax" colspan="2" rowspan="3">세부평가기준</th>
+            <th class="tg-0lax" colspan="3">제안서 기술능력평가(100점)</th>
+        </tr>
+        <tr>
+            <td class="tg-1wig" colspan="2">비계량평가(90)</td>
+            <td class="tg-0lax" rowspan="3">계량평가(10)</td>
+        </tr>
+        <tr>
+            <td class="tg-1wig">서면(72.0)</td>
+            <td class="tg-1wig">발표(18)</td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">세부평가내용</td>
+            <td class="tg-0lax">배점(A)</td>
+            <td class="tg-1wig">배점(=A*0.8)</td>
+            <td class="tg-1wig">배점(=A*0.2)</td>
+        </tr>
+        <tr>
+            <td class="tg-0lax" rowspan="4">전략 및 방법론</td>
+            <td class="tg-0lax">사업이해도</td>
+            <td class="tg-0lax">5</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax" rowspan="23">별도평가</td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">추진전략</td>
+            <td class="tg-0lax">4</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">적용기술</td>
+            <td class="tg-0lax">3</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">개발방법론</td>
+            <td class="tg-0lax">3</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax" rowspan="5">기술 및 기능</td>
+            <td class="tg-0lax">기능요구사항</td>
+            <td class="tg-0lax">10</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">보안요구사항</td>
+            <td class="tg-0lax">5</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">데이터요구사항</td>
+            <td class="tg-0lax">5</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">시스템요구사항</td>
+            <td class="tg-0lax">4</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">제약사항</td>
+            <td class="tg-0lax">4</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax" rowspan="3">성능 및 품질</td>
+            <td class="tg-0lax">성능요구사항</td>
+            <td class="tg-0lax">10</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">품질요구사항</td>
+            <td class="tg-0lax">5</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">인터페이스요구사항</td>
+            <td class="tg-0lax">4</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax" rowspan="3">프로젝트관리</td>
+            <td class="tg-0lax">관리방법론</td>
+            <td class="tg-0lax">5</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">일정계획</td>
+            <td class="tg-0lax">3</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">개발장비</td>
+            <td class="tg-0lax">3</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax" rowspan="6">프로젝트지원</td>
+            <td class="tg-0lax">품질보증</td>
+            <td class="tg-0lax">2</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">시험운영</td>
+            <td class="tg-0lax">2</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">교육훈련</td>
+            <td class="tg-0lax">2</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">유지보수</td>
+            <td class="tg-0lax">2</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">정보보안</td>
+            <td class="tg-0lax">2</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">비상대책</td>
+            <td class="tg-0lax">2</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">기타</td>
+            <td class="tg-0lax">하도급계약 적정성</td>
+            <td class="tg-0lax">5</td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+            <td class="tg-0lax"><select name="schIsCountry" onchange="document.schFrm.submit();" class="form-control form-control-sm">
+                <option value="배점" selected=""> 배점 </option>
+                <option value="100">수</option>
+                <option value="90">우</option>
+                <option value="80">미</option>
+                <option value="70">양</option>
+                <option value="60">가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="tg-1wig" colspan="2">비계량 합계</td>
+            <td class="tg-1wig">90</td>
+            <td class="tg-0lax"></td>
+            <td class="tg-0lax"></td>
+        </tr>
+        </tbody></table>
+    <p align="center">
+        <button type="button" class="btn btn-success">제안업체A 평가제출</button>
+    </p>
+
+
+</div>
+</body>
+</html>
+

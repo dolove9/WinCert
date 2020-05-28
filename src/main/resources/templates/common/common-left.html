@@ -5,56 +5,338 @@
       layout:decorator="layout/main-layout">
 
 <th:block th:fragment="common-left">
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
-        <!-- Brand Logo -->
-        <a href="/demo/" class="brand-link">
-            <span class="brand-text font-weight-light">WinCert :: Web Framework</span>
-        </a>
+    <!-- Sidebar group -->
+    <!--<div class="sidebar-group">
+        div class="sidebar" id="settings">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title">Settings</h6>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item pl-0 pr-0">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                <label class="custom-control-label" for="customSwitch1">Allow notifications.</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item pl-0 pr-0">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                <label class="custom-control-label" for="customSwitch2">Hide user requests</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item pl-0 pr-0">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                                <label class="custom-control-label" for="customSwitch3">Speed up demands</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item pl-0 pr-0">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch4" checked>
+                                <label class="custom-control-label" for="customSwitch4">Hide menus</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item pl-0 pr-0">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                                <label class="custom-control-label" for="customSwitch5">Remember next visits</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item pl-0 pr-0">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch6">
+                                <label class="custom-control-label" for="customSwitch6">Enable report
+                                    generation.</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div-->
+        <!-- END: Settings -->
 
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <!-- Sidebar Menu -->
-            <nav class="mt-2">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                    <li class="nav-item has-treeview menu-open">
-                        <a href="#" class="nav-link active">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>
-                                User Test
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
+        <!-- BEGIN: Chat List -->
+        <!--
+        <div class="sidebar" id="chat-list">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-4">
+                        <h6 class="card-title mb-0">Chats</h6>
+                        <a href="chat.html" class="btn btn-primary btn-sm">New Chat</a>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="chat.html" class="list-group-item d-flex px-0 align-items-center">
+                            <div class="pr-3">
+                            <span class="avatar avatar-state-danger">
+                                <img th:src="@{/assets/media/image/user/women_avatar3.jpg}"
+                                     class="rounded-circle"
+                                     alt="image">
+                            </span>
+                            </div>
+                            <div class="flex-grow- 1">
+                                <h6 class="mb-1">Cass Queyeiro</h6>
+                                <span class="text-muted">
+                                <i class="fa fa-image mr-1"></i> Photo
+                            </span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="small text-muted">Yesterday</span>
+                            </div>
                         </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="/user/userInfo" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>사용자 보기</p>
-                                </a>
+                        <a href="chat.html" class="list-group-item d-flex px-0 align-items-center">
+                            <div class="pr-3">
+                            <span class="avatar avatar-state-warning">
+                                <img th:src="@{/assets/media/image/user/man_avatar4.jpg}"
+                                     class="rounded-circle"
+                                     alt="image">
+                            </span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Evered Asquith</h6>
+                                <span class="text-muted">
+                                <i class="fa fa-video-camera mr-1"></i> Video
+                            </span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="small text-muted">Last week</span>
+                            </div>
+                        </a>
+                        <a href="chat.html" class="list-group-item px-0 d-flex align-items-center">
+                            <div class="pr-3">
+                                <div class="avatar avatar-state-danger">
+                                    <span class="avatar-title bg-success rounded-circle">F</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Francisco Ubsdale</h6>
+                                <span class="text-muted">Hello how are you?</span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="small text-muted">2:32 PM</span>
+                            </div>
+                        </a>
+                        <a href="chat.html" class="list-group-item px-0 d-flex align-items-center">
+                            <div class="pr-3">
+                                <div class="avatar avatar-state-success">
+                                    <img th:src="@{/assets/media/image/user/women_avatar1.jpg"
+                                         class="rounded-circle"
+                                         alt="image">
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Natale Janu</h6>
+                                <span class="text-muted">Hi!</span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="badge badge-primary badge-pill ml-auto mb-2">3</span>
+                                <span class="small text-muted">08:27 PM</span>
+                            </div>
+                        </a>
+                        <a href="chat.html" class="list-group-item d-flex px-0 align-items-center">
+                            <div class="pr-3">
+                            <span class="avatar avatar-state-warning">
+                                <img th:src="@{/assets/media/image/user/women_avatar2.jpg}"
+                                     class="rounded-circle"
+                                     alt="image">
+                            </span>
+                            </div>
+                            <div class="flex-grow- 1">
+                                <h6 class="mb-1">Orelie Rockhall</h6>
+                                <span class="text-muted">
+                                <i class="fa fa-image mr-1"></i> Photo
+                            </span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="small text-muted">Yesterday</span>
+                            </div>
+                        </a>
+                        <a href="chat.html" class="list-group-item d-flex px-0 align-items-center">
+                            <div class="pr-3">
+                            <span class="avatar avatar-state-info">
+                                <img th:src="@{/assets/media/image/user/man_avatar1.jpg}"
+                                     class="rounded-circle"
+                                     alt="image">
+                            </span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Barbette Bolf</h6>
+                                <span class="text-muted">
+                                <i class="fa fa-video-camera mr-1"></i> Video
+                            </span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="small text-muted">Last week</span>
+                            </div>
+                        </a>
+                        <a href="chat.html" class="list-group-item d-flex px-0 align-items-center">
+                            <div class="pr-3">
+                            <span class="avatar avatar-state-secondary">
+                                <span class="avatar-title bg-warning rounded-circle">D</span>
+                            </span>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Dudley Laborde</h6>
+                                <span class="text-muted">Hello how are you?</span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="small text-muted">2:32 PM</span>
+                            </div>
+                        </a>
+                        <a href="chat.html" class="list-group-item d-flex px-0 align-items-center">
+                            <div class="pr-3">
+                            <span class="avatar avatar-state-success">
+                                <img th:src="@{/assets/media/image/user/man_avatar2.jpg}"
+                                     class="rounded-circle"
+                                     alt="image">
+                            </span>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Barbaraanne Riby</h6>
+                                <span class="text-muted">Hi!</span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="small text-muted">08:27 PM</span>
+                            </div>
+                        </a>
+                        <a href="chat.html" class="list-group-item d-flex px-0 align-items-center">
+                            <div class="pr-3">
+                            <span class="avatar avatar-state-danger">
+                                <img th:src="@{/assets/media/image/user/women_avatar3.jpg}"
+                                     class="rounded-circle"
+                                     alt="image">
+                            </span>
+                            </div>
+                            <div class="flex-grow- 1">
+                                <h6 class="mb-1">Mariana Ondrousek</h6>
+                                <span class="text-muted">
+                                <i class="fa fa-image mr-1"></i> Photo
+                            </span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="small text-muted">Yesterday</span>
+                            </div>
+                        </a>
+                        <a href="chat.html" class="list-group-item d-flex px-0 align-items-center">
+                            <div class="pr-3">
+                            <span class="avatar avatar-state-warning">
+                                <img th:src="@{/assets/media/image/user/man_avatar4.jpg}"
+                                     class="rounded-circle"
+                                     alt="image">
+                            </span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Ruprecht Lait</h6>
+                                <span class="text-muted">
+                                <i class="fa fa-video-camera mr-1"></i> Video
+                            </span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="small text-muted">Last week</span>
+                            </div>
+                        </a>
+                        <a href="chat.html" class="list-group-item d-flex px-0 align-items-center">
+                            <div class="pr-3">
+                            <span class="avatar avatar-state-info">
+                                <img th:src="@{/assets/media/image/user/man_avatar1.jpg}"
+                                     class="rounded-circle"
+                                     alt="image">
+                            </span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Cosme Hubbold</h6>
+                                <span class="text-muted">
+                                <i class="fa fa-video-camera mr-1"></i> Video
+                            </span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="small text-muted">Last week</span>
+                            </div>
+                        </a>
+                        <a href="chat.html" class="list-group-item d-flex px-0 align-items-center">
+                            <div class="pr-3">
+                            <span class="avatar avatar-state-secondary">
+                                <span class="avatar-title bg-secondary rounded-circle">M</span>
+                            </span>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Mallory Darch</h6>
+                                <span class="text-muted">Hello how are you?</span>
+                            </div>
+                            <div class="text-right ml-auto d-flex flex-column">
+                                <span class="small text-muted">2:32 PM</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+        <!-- ./ Sidebar group -->
+        <!-- begin::navigation -->
+        <div class="navigation">
+            <div class="navigation-menu-body">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="nav-link-icon">
+                                <i data-feather="pie-chart" ></i>
+                            </span>
+                            <span>메인화면</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a  class="active" href="ecommerce-dashboard.html">평가위원장 : 한위원장</a>
                             </li>
-                            <!--
-                            <li class="nav-item">
-                                <a href="/demo/mfa/mfa_add" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>MFA 추가</p>
-                                </a>
+                            <li>
+                                <a  class="active" href="analytics-dashboard.html">간사 : 한간사</a></li>
                             </li>
-                            <li class="nav-item">
-                                <a href="/demo/authn/req_authn" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>인증 요청</p>
-                                </a>
+                            <li>
+                                <a  class="active" href="analytics-dashboard.html">평가일 : 2020년04월09일<br />
+                                    평가시간 : 12:00 ~ 14:00</a></li>
                             </li>
-                            -->
-
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="nav-link-icon">
+                                <i data-feather="edit-3"></i>
+                            </span>
+                            <span>공지사항</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a  class="active" href="orders.html">공지사항 00001</a></li>
+                            <li>
+                                <a  class="active" href="product-list.html">공지사항 00002</a></li>
+                            <li>
+                                <a  class="active" href="product-grid.html">공지사항 00003</a></li>
+                            <li>
+                                <a  class="active" href="product-detail.html">공지사항 00004</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="nav-link-icon">
+                                <i data-feather="edit-3"></i>
+                            </span>
+                            <span>FAQ</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a  class="active" href="orders.html">FAQ 00001</a></li>
+                            <li>
+                                <a  class="active" href="product-list.html">FAQ 00002</a></li>
+                            <li>
+                                <a  class="active" href="product-grid.html">FAQ 00003</a></li>
+                            <li>
+                                <a  class="active" href="product-detail.html">FAQ 00004</a></li>
                         </ul>
                     </li>
                 </ul>
-            </nav>
-            <!-- /.sidebar-menu -->
+            </div>
         </div>
-        <!-- /.sidebar -->
-    </aside>
+        <!-- end::navigation -->
 </th:block>
 
 </html>

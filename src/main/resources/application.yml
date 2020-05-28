@@ -10,23 +10,10 @@ spring:
 spring:
   profiles: local
 
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/spDemo
-    username: sp_demo
-    password: sp_demo
-
-  quartz:
-    job-store-type: jdbc
-
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-
 logging:
   level:
     org:
       springframework: info
-      hibernate.type.descriptor.sql: trace
     tomcat: trace
     com.wincert.framework: debug
   file.max-size: 50MB
@@ -45,20 +32,10 @@ logging:
 spring:
   profiles: develop
 
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url:
-    username:
-    password:
-
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-
 logging:
   level:
     org:
       springframework: info
-      hibernate.type.descriptor.sql: trace
     tomcat: trace
     com.wincert.framework: DEBUG
   file.max-size: 50MB

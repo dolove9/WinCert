@@ -4,8 +4,9 @@
 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 	<head>
 		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>WinCert :: Web Framework</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Smart Enterprise EMS - 평가위원포탈</title>
 		<th:block th:include="layout/include-css.html :: css"></th:block>
 		<!-- ###################### 각각 페이지 css ###################### -->
 		<th:block layout:fragment="contents-css">
@@ -13,29 +14,37 @@
 		<!-- //###################### 각각 페이지 css ###################### -->
 	</head>
 
+	<body>
+		<!-- Preloader -->
+		<div class="preloader">
+			<div class="preloader-icon"></div>
+		</div>
+		<!-- ./ Preloader -->
 
-	<!-- 상단 메뉴 -->
-	<th:block th:include="common/common-head.html :: common-head"></th:block>
-
-
-	<!-- 레프트 메뉴 -->
-	<th:block th:include="common/common-left.html :: common-left"></th:block>
-
-
-
-	<!-- Content Wrapper. Contains page content -->
-	<div class="content-wrapper">
-		<!-- Main content -->
-			<!-- ###################### 각각 페이지 컨텐츠 ###################### -->
-<!--			<section layout:fragment="contents-body"></section>-->
-		<th:block layout:fragment="body-contents"></th:block>
-			<!--// ###################### 각각 페이지 컨텐츠 ###################### -->
-		<!-- /.content -->
-	</div>
+		<!-- Layout wrapper -->
+		<div class="layout-wrapper">
+			<!-- 상단 메뉴 -->
+			<th:block th:include="common/common-head.html :: common-head"></th:block>
 
 
-	<th:block th:include="common/common-footer.html :: common-footer"></th:block>
+			<!-- Content Wrapper. Contains page content -->
+			<div class="content-wrapper">
+				<!-- 레프트 메뉴 -->
+				<th:block th:include="common/common-left.html :: common-left"></th:block>
 
+				<!-- Content body -->
+				<div class="content-body">
+
+					<!-- ###################### 각각 페이지 컨텐츠 ###################### -->
+					<th:block layout:fragment="body-contents"></th:block>
+
+					<th:block th:include="common/common-footer.html :: common-footer"></th:block>
+				</div>
+				<!-- /.Content body -->
+			</div>
+
+		</div>
+		<!-- ./ Layout wrapper -->
 	</body>
 	<th:block th:include="layout/include-js.html :: js"></th:block>
 	<!-- ###################### 각각 페이지 script ###################### -->

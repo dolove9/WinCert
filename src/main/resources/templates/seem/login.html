@@ -1,0 +1,81 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smart Enterprise EMS - 평가위원포탈</title>
+
+    <!-- Favicon -->
+    <!--link rel="shortcut icon" href="../../assets/media/image/favicon.png"/-->
+    <link rel="shortcut icon" href="http://www.secuhap.com/images/favicon.ico">
+
+    <!-- Plugin styles -->
+    <link rel="stylesheet" th:href="@{/vendors/bundle.css}" type="text/css">
+
+    <!-- App styles -->
+    <link rel="stylesheet" th:href="@{/assets/css/app.min.css}" type="text/css">
+</head>
+<body class="form-membership">
+
+<!-- begin::preloader-->
+<div class="preloader">
+    <div class="preloader-icon"></div>
+</div>
+<!-- end::preloader -->
+
+<div class="form-wrapper">
+    <div class="header-left">
+
+        <div class="header-logo">
+            <a href=index.html>
+                <img class="logo" th:src="@{/assets/seems_logo1.png}" height="31" alt="logo"> 평가위원포탈
+            </a>
+        </div>
+    </div>
+
+    <!-- logo -->
+    <div id="logo">
+        <img class="logo" th:src="@{/assets/media/image/logo.png}" alt="image">
+        <img class="logo-dark" th:src="@{/assets/media/image/logo-dark.png}" alt="image">
+    </div>
+    <!-- ./ logo -->
+
+    <h5>평가위원 로그인</h5>
+    <!-- form -->
+    <form action="/layouts/vertical/">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="휴대폰 번호 입력 '-' 없이" required autofocus>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="SMS 받은 비밀번호" required>
+        </div>
+        <div class="form-group d-flex justify-content-between">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" checked="" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">로그인정보기억하기</label>
+            </div>
+            <!--a href="recovery-password.html">Reset password</a-->
+        </div>
+        <button class="btn btn-primary btn-block">로그인</button>
+        <hr>
+        <p class="text-muted">Smart Enterprise EMS에서 발송된 SMS(휴대폰문자)에 표기된 비밀번호를 입력해주세요.</p>
+        <p class="text-muted">Smart Enterprise EMS에서 평가위원으로 선정된 분만 로그인해주시기 바랍니다.</p>
+        <ul class="list-inline">
+        </ul>
+        <hr>
+        <p class="text-muted">비밀번호를 분실하였을 경우, 담당자에 SMS 재발송요청해주시기 바랍니다.</p>
+    </form>
+    <!-- ./ form -->
+
+
+</div>
+
+<!-- Plugin scripts -->
+<script th:src="@{/vendors/bundle.js}"></script>
+
+<!-- App scripts -->
+<script th:src="@{/assets/js/app.min.js}"></script>
+</body>
+</html>
